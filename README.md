@@ -9,6 +9,15 @@
 * wget https://github.com/intel-iot-devkit/sample-videos/raw/master/worker-zone-detection.mp4
 * wget https://pjreddie.com/media/files/yolov3.weights
 * wget https://pjreddie.com/media/files/darknet53.conv.74
+## 模型转换
+* python3 convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ## 推理测试
 * python3 yolo_video.py --input worker-zone-detection.mp4
+## 下载数据集及处理
+* wget https://pjreddie.com/media/files/VOCtrainval_06-Nov-2007.tar
+* wget https://pjreddie.com/media/files/VOCtest_06-Nov-2007.tar
+* tar -xvf VOCtrainval_06-Nov-2007.tar
+* tar -xvf VOCtest_06-Nov-2007.tar
+* python voc_annotation.py
 ## 训练
+* python train.py
